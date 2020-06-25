@@ -1,0 +1,20 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+
+
+속성이름                     예시                         설명
+
+width                     width=240                  화면의 너비
+                      width=device-width
+
+height                    height=800                 화면의 높이
+                      height=device-height
+       
+initial-scale           initial-scale=2.0            초기 확대 비율
+
+user-scalable           user-scalable=no             확대 및 축소의 가능 여부
+
+minimum-scale           minimum-scale=1.0            최소 축소 비율
+
+maximum-scale           maximum-scale=2.0            최대 축소 비율
+
+target-densitydpi   target-densitydpi=medium-dpi     DPI 지정
