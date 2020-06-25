@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+</head>
+<style>
+	p{
+		position:fixed; right:0; border:1px solid red;
+	}
+</style>
+<script src="./js/jquery-3.5.1.js"></script>
+<script>
+$(document).ready(function(){
+		
+		$(window).scroll(function(){
+				 // window 객체가 스크롤이 발생하면 아래와 같은 행동들을 하겠습니다.
+				var top = $(window).scrollTop()+300;
+        // top 이라는 변수를 만들어 이 안에 현재 윈도우 객체의 스크롤이 몇픽셀 만큼 이동 됐는지를 담겠습니다.
+				$("p").text(top);
+        // 그리고 그 값(변수 top)을 p 라는 요소의 text 값으로 전달하겠습니다.
+
+				var i6 = $(".i6").offset().top;
+				
+				var i1 = $(".i1").offset().top;
+				
+				if(top > i6){
+					$(".i1").fadeOut();
+				}else{
+					$(".i1").fadeIn();
+				}
+		});
+});
+</script>
+<body>
+	<p>0</p>
+	<div class="i1" style="width:300px; height:300px; background-color:red; position:fixed; left:400px; top:400px;">
+	</div>
+	<div class="i2" style="width:300px; height:300px; background-color:blue;">
+	</div>
+	<div class="i3" style="width:300px; height:300px; background-color:green;">
+	</div>
+	<div class="i4" style="width:300px; height:300px; background-color:black;">
+	</div>
+	<div class="i5" style="width:300px; height:300px; background-color:yellow;">
+	</div>
+	<div class="i6" style="width:300px; height:300px; background-color:purple;">
+	</div>
+	<div class="i7" style="width:300px; height:300px; background-color:orange;">
+	</div>
+	<div class="i8" style="width:300px; height:300px; background-color:red;">
+	</div>
+</body>
+</html>
