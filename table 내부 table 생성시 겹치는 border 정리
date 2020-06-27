@@ -1,0 +1,68 @@
+//table 내부 table 생성시 겹치는 border 정리
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <style>
+  table{
+    width:100%;
+    border:1px solid black;
+    border-collapse:collapse;
+  }
+  th, td{
+    border:1px solid black;
+  }
+  </style>
+  <body>
+    <table>
+      <tr>
+        <th>이름</td><td>이태성</td>
+        <th>생년월일</th><td>19890428</td>
+        <th>이메일</th><td>ledafmail.com</td>
+      </tr>
+      <tr>
+        <th>휴대폰</th>
+        <td>010-09090-022</td>
+        <th>주소</th>
+        <td>서울시 강서구</td>
+      </tr>
+      <tr>
+        <th>학력</th>
+        <td colspan="5" style="padding:0px;">
+          <table style="border:0px;">
+            <tr>
+              <td style="border:0px;">
+                고등학교
+              </td>
+            </tr>
+            <tr>
+              <td style="border:0px; border-top:1px solid black;">
+                대학교
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr>
+        <th>경력사항</th>
+        <td colspan="5" style="padding:0px;" >
+          <table style="border:0px;">
+            <tr>
+              <td style="border:0px;">
+                비전테크
+              </td>
+            </tr>
+            <tr>
+              <td style="border:0; border-top:1px solid black;">
+                삼성카드
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
