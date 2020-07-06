@@ -1,3 +1,6 @@
+<?php
+include_once "./inc/header.php";
+?>
 <!DOCTYPE html>
 <html>
   <head>
@@ -11,12 +14,11 @@
       /* body 내용 상하좌우 틈 없이 꽉 채우기 */
       body {margin:0px;}
 
-      ul{
+      ul, ol, li{
         /* ul 내용 왼쪽 공백 없애기 */
-        padding-left:0px;
+        padding:0px;
+        list-style:none;
       }
-
-      li{list-style:none;}
 
       a{text-decoration:none;}
     </style>
@@ -37,33 +39,32 @@
       }
 
       .main_gnb{
+        /* 상단 여백 없애기 */
         float:left;
       }
 
       .main_gnb > li{
-        float:left;
+        display:inline-block;
+        position:relative;
       }
 
       .sub_gnb{
         display:none;
+        position:absolute;
       }
     </style>
 
     <script>
       $(function(){
         $(".main_gnb > li > a").click(function(){
-
-          if($(this).next("ul").is(":visible") == false){
-            $(this).next("ul").removeClass("sub_gnb");
+          if($(this).next("ul").is(":visible")){
+            $(this).next("ul").css("display", "none");
           }else{
-            $(this).next("ul").addClass("sub_gnb");
+            $(this).next("ul").css("display", "block");
+            $(".sub_gnb").not($(this).next("ul")).css("display", "none");
           }
-
-          /*
-          $(this).next("ul").toggleClass("sub_gnb");
-          */
         })
-      });
+      })
     </script>
   </head>
   <body>
